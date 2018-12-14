@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   
   
-  <meta name="description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);			//输入地图宽 长maze(n,m);mem(vis);						//内存初始化node ans = bfs(1">
+  <meta name="description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);//输入地图宽 长maze(n,m);mem(vis);//内存初始化node ans = bfs(1,1,n-2,m-">
   
 
   
@@ -15,18 +15,18 @@
   
   <title>随机生成迷宫并求解 | Hxx&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);			//输入地图宽 长maze(n,m);mem(vis);						//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step =">
+  <meta name="description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);//输入地图宽 长maze(n,m);mem(vis);//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step == -1)&amp;#12">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随机生成迷宫并求解">
 <meta property="og:url" content="/blog/2018/12/14/随机生成迷宫并求解/index.html">
 <meta property="og:site_name" content="Hxx&#39;s blog">
-<meta property="og:description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);			//输入地图宽 长maze(n,m);mem(vis);						//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step =">
+<meta property="og:description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);//输入地图宽 长maze(n,m);mem(vis);//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step == -1)&amp;#12">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-14T09:38:34.314Z">
+<meta property="og:updated_time" content="2018-12-14T09:40:17.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随机生成迷宫并求解">
-<meta name="twitter:description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);			//输入地图宽 长maze(n,m);mem(vis);						//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step =">
+<meta name="twitter:description" content="主函数1234567891011121314151617181920212223int n, m;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;n, &amp;amp;m);//输入地图宽 长maze(n,m);mem(vis);//内存初始化node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）if(ans.step == -1)&amp;#12">
   
   
     <link rel="icon" href="/blog/css/images/favicon.ico">
@@ -81,13 +81,13 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="/blog/2018/12/14/随机生成迷宫并求解/" data-id="cjpnubm0m0001e8vg6phu4kpq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="/blog/2018/12/14/随机生成迷宫并求解/" data-id="cjpnudwob0001t4vg6rpbt71k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int n, m;</span><br><span class="line">scanf(&quot;%d %d&quot;, &amp;n, &amp;m);			//输入地图宽 长</span><br><span class="line"></span><br><span class="line">maze(n,m);</span><br><span class="line"></span><br><span class="line">mem(vis);						//内存初始化</span><br><span class="line"></span><br><span class="line">node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）</span><br><span class="line"></span><br><span class="line">if(ans.step == -1)&#123;</span><br><span class="line">	printf(&quot;不通&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;Cost steps : %d\n&quot;, ans.step);</span><br><span class="line">printf(&quot;Route : start&quot;);</span><br><span class="line">while (!ans.route.empty())&#123;</span><br><span class="line">	pair&lt;int, int&gt; site = ans.route.front();</span><br><span class="line">	printf(&quot;-&gt;(%d %d)&quot;, site.first, site.second);</span><br><span class="line">	ans.route.pop();</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;-&gt;end\n&quot;);</span><br><span class="line">return 0;</span><br></pre></td></tr></table></figure>
+        <h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int n, m;</span><br><span class="line">scanf(&quot;%d %d&quot;, &amp;n, &amp;m);//输入地图宽 长</span><br><span class="line"></span><br><span class="line">maze(n,m);</span><br><span class="line"></span><br><span class="line">mem(vis);//内存初始化</span><br><span class="line"></span><br><span class="line">node ans = bfs(1,1,n-2,m-2,n,m);//解迷宫（起点坐标，终点坐标，地图宽长）</span><br><span class="line"></span><br><span class="line">if(ans.step == -1)&#123;</span><br><span class="line">	printf(&quot;不通/无解&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;Cost steps : %d\n&quot;, ans.step);</span><br><span class="line">printf(&quot;Route : start&quot;);</span><br><span class="line">while (!ans.route.empty())&#123;</span><br><span class="line">	pair&lt;int, int&gt; site = ans.route.front();</span><br><span class="line">	printf(&quot;-&gt;(%d %d)&quot;, site.first, site.second);</span><br><span class="line">	ans.route.pop();</span><br><span class="line">&#125;</span><br><span class="line">	printf(&quot;-&gt;end\n&quot;);</span><br><span class="line">return 0;</span><br></pre></td></tr></table></figure>
 
       
     </div><!-- .entry-content -->
